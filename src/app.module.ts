@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { KnexModule } from 'nest-knexjs';
-import { ReleaseNotesModule } from '~modules/releaseNote';
 import * as dotenv from 'dotenv';
+import { AuthModule } from '~modules/auth';
 
 dotenv.config();
 
@@ -22,7 +22,7 @@ dotenv.config();
         },
       },
     }),
-    ReleaseNotesModule,
+    AuthModule,
   ],
 })
 export class AppModule {}
